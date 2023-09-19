@@ -14,25 +14,25 @@ Chart.register(CategoryScale, {
 });
 
 
-type DATA = {
-    "id": string,
-    "date": string,
-    "time": string,
-    "createdAt": string,
-    "updatedAt": string,
-    "cityId": number,
-    "persen": number,
-    "candidate1": {
-        "id": number,
-        "name": string,
-        "img": string
-    },
-    "candidate2": {
-        "id": number,
-        "name": string,
-        "img": string
-    }
-}
+// type DATA = {
+//     "id": string,
+//     "date": string,
+//     "time": string,
+//     "createdAt": string,
+//     "updatedAt": string,
+//     "cityId": number,
+//     "persen": number,
+//     "candidate1": {
+//         "id": number,
+//         "name": string,
+//         "img": string
+//     },
+//     "candidate2": {
+//         "id": number,
+//         "name": string,
+//         "img": string
+//     }
+// }
 
 // const data = [120, 200, 150, 80, 70, 110, 130]
 // const data2 = [
@@ -75,7 +75,7 @@ function fambar(url: string) {
     }
 }
 
-const option: (dataNya: DATA[], test: boolean) => EChartsOption = (dataNya: DATA[], test: boolean) => {
+const option: (dataNya: any[], test: boolean) => EChartsOption = (dataNya: any[], test: boolean) => {
 
     return {
         xAxis: {
