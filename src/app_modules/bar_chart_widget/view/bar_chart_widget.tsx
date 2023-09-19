@@ -187,7 +187,7 @@ const option: (dataNya: DATA[], test: boolean) => EChartsOption = (dataNya: DATA
 
 
 
-export default function ViewBarchart({ data, test }: { data: any[], test: boolean }) {
+export default function WidgetBarchart({ data, test }: { data: any[], test: boolean }) {
 
     return <>
         <EChartsReact style={{
