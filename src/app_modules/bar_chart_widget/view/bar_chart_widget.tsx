@@ -15,22 +15,22 @@ Chart.register(CategoryScale, {
 
 
 type DATA = {
-    "id": 14641,
-    "date": "2023-09-19T00:00:00.000Z",
-    "time": null,
-    "createdAt": "2023-09-19T02:34:14.160Z",
-    "updatedAt": "2023-09-19T02:34:14.160Z",
-    "cityId": null,
-    "persen": 49.89,
+    "id": string,
+    "date": string,
+    "time": string,
+    "createdAt": string,
+    "updatedAt": string,
+    "cityId": number,
+    "persen": number,
     "candidate1": {
-        "id": 2,
-        "name": "Ganjar Pranowo",
-        "img": "/candidate/ganjar.png"
+        "id": number,
+        "name": string,
+        "img": string
     },
     "candidate2": {
-        "id": 1,
-        "name": "Prabowo Subianto",
-        "img": "/candidate/prabowo.png"
+        "id": number,
+        "name": string,
+        "img": string
     }
 }
 
