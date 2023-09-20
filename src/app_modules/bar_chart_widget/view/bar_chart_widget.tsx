@@ -97,7 +97,7 @@ const option: (dataNya: any[], test: boolean) => EChartsOption = (dataNya: any[]
                     value: v.persen,
                     label: {
                         align: "right",
-                        offset: [-50,0],
+                        offset: [-50, 0],
                         backgroundColor: {
                             image: !test ? v.candidate1.img : "https://avenuesrecruiting.com/wp-content/uploads/2016/12/candidate-icon-300x300.png",
                         },
@@ -187,13 +187,113 @@ const option: (dataNya: any[], test: boolean) => EChartsOption = (dataNya: any[]
 
 
 
-export default function WidgetBarchart({ data, test }: { data: any[], test: boolean }) {
+export default function WidgetBarchart({ data, test }: { data?: any[], test: boolean }) {
 
     return <>
         <EChartsReact style={{
             height: 500
-        }} option={option(data, test)} />
+        }} option={option(test ? sampleData() as any : data, test)} />
     </>;
 
+}
+
+function sampleData() {
+    return [
+        {
+            "id": 14641,
+            "date": "2023-09-19T00:00:00.000Z",
+            "time": null,
+            "createdAt": "2023-09-19T02:34:14.160Z",
+            "updatedAt": "2023-09-19T02:34:14.160Z",
+            "cityId": null,
+            "persen": 49.89,
+            "candidate1": {
+                "id": 2,
+                "name": "Ganjar Pranowo",
+                "img": "/candidate/ganjar.png"
+            },
+            "candidate2": {
+                "id": 1,
+                "name": "Prabowo Subianto",
+                "img": "/candidate/prabowo.png"
+            }
+        },
+        {
+            "id": 14631,
+            "date": "2023-09-19T00:00:00.000Z",
+            "time": null,
+            "createdAt": "2023-09-19T02:34:14.160Z",
+            "updatedAt": "2023-09-19T02:34:14.160Z",
+            "cityId": null,
+            "persen": 49.86,
+            "candidate1": {
+                "id": 1,
+                "name": "Prabowo Subianto",
+                "img": "/candidate/prabowo.png"
+            },
+            "candidate2": {
+                "id": 2,
+                "name": "Ganjar Pranowo",
+                "img": "/candidate/ganjar.png"
+            }
+        },
+        {
+            "id": 14637,
+            "date": "2023-09-19T00:00:00.000Z",
+            "time": null,
+            "createdAt": "2023-09-19T02:34:14.160Z",
+            "updatedAt": "2023-09-19T02:34:14.160Z",
+            "cityId": null,
+            "persen": 46.28,
+            "candidate1": {
+                "id": 1,
+                "name": "Prabowo Subianto",
+                "img": "/candidate/prabowo.png"
+            },
+            "candidate2": {
+                "id": 8,
+                "name": "Mahfud MD",
+                "img": "/candidate/mahfud.png"
+            }
+        },
+        {
+            "id": 14647,
+            "date": "2023-09-19T00:00:00.000Z",
+            "time": null,
+            "createdAt": "2023-09-19T02:34:14.160Z",
+            "updatedAt": "2023-09-19T02:34:14.160Z",
+            "cityId": null,
+            "persen": 43.65,
+            "candidate1": {
+                "id": 2,
+                "name": "Ganjar Pranowo",
+                "img": "/candidate/ganjar.png"
+            },
+            "candidate2": {
+                "id": 8,
+                "name": "Mahfud MD",
+                "img": "/candidate/mahfud.png"
+            }
+        },
+        {
+            "id": 14646,
+            "date": "2023-09-19T00:00:00.000Z",
+            "time": null,
+            "createdAt": "2023-09-19T02:34:14.160Z",
+            "updatedAt": "2023-09-19T02:34:14.160Z",
+            "cityId": null,
+            "persen": 42.45,
+            "candidate1": {
+                "id": 2,
+                "name": "Ganjar Pranowo",
+                "img": "/candidate/ganjar.png"
+            },
+            "candidate2": {
+                "id": 7,
+                "name": "Erick Thohir",
+                "img": "/candidate/eric.png"
+            }
+        }
+    ]
 }
 
